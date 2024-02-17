@@ -1,0 +1,27 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000000;
+    padding: 2rem 0;
+    border-bottom: 1px solid #560257;
+
+    .logo {
+        width: 10rem;
+    }
+    
+    .menu {
+        text-align: center;
+        display: flex;
+        gap: 1.5rem;
+    }
+    
+    .menu a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 1.7rem;
+    }
+}

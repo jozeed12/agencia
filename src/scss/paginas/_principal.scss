@@ -1,0 +1,70 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.main-contenedor {
+    
+    .caja_bienvenida {
+        background-image: linear-gradient(180deg,#121212,#59025a);
+        padding: 2rem 4rem;
+
+        .bienvenida {
+            display: flex;
+            justify-content: center;
+
+            h1 {
+                font-size: 4rem;
+                text-align: center;
+                color: white;
+            }
+        }
+
+        .jose_info {
+            justify-content: space-around;
+            text-align: center;
+
+            .jose {
+                width: 30vw;
+                min-width: 23rem;
+
+                @include m.desktop {
+                    width: 35rem;
+                }
+            }
+            
+            p {
+                text-align: center;
+                margin-top: 3rem;
+                font-size: 2rem;
+                margin-bottom: 0;
+                color: white;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
+    .caja_servicios {
+        color: white;
+        background-color: #320132;
+        padding: 4rem;
+
+        h2 {
+            text-align: center;
+            margin: 2rem auto 4rem auto;
+            font-size: 4rem;
+        }
+
+        .servicios {
+            text-align: center;
+            display: grid;
+            place-items: center;
+            gap: 5rem;
+            grid-template-columns: repeat(1, 1fr);
+
+            @include m.desktop {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+
+}
+
