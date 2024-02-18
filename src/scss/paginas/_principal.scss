@@ -34,11 +34,16 @@
             .redes_sociales {
                 display: flex;
                 justify-content: center;
-                gap: 2rem;
+                gap: 2.5rem;
 
                 a {
                     font-size: 3rem;
                     color: white;
+                    transition: all .2s ease;
+                }
+
+                a:hover {
+                    transform: scale(1.2);
                 }
             }
             
@@ -101,6 +106,16 @@
 
             @include m.desktop {
                 grid-template-columns: repeat(3, 1fr);
+            }
+
+            .proyecto {
+                img {
+                    width: 13rem;
+                    transition: all .3s ease;
+                }
+                img:hover {
+                    transform: scale(1.1);
+                }
             }
         }
     }
