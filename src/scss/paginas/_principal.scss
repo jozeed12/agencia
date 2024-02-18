@@ -30,6 +30,17 @@
                     width: 35rem;
                 }
             }
+
+            .redes_sociales {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+
+                a {
+                    font-size: 3rem;
+                    color: white;
+                }
+            }
             
             p {
                 text-align: center;
@@ -54,6 +65,34 @@
         }
 
         .servicios {
+            text-align: center;
+            display: grid;
+            place-items: center;
+            gap: 5rem;
+            grid-template-columns: repeat(1, 1fr);
+
+            @include m.desktop {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            i {
+                font-size: 5rem;
+            }
+        }
+    }
+
+    .caja_proyectos {
+        color: white;
+        background-color: #191919;
+        padding: 4rem;
+
+        h2 {
+            text-align: center;
+            margin: 2rem auto 4rem auto;
+            font-size: 4rem;
+        }
+
+        .proyectos {
             text-align: center;
             display: grid;
             place-items: center;
