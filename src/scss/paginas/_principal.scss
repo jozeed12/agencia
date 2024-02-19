@@ -2,7 +2,13 @@
 @use 'base/mixins' as m;
 
 .main-contenedor {
-    
+
+    margin-top: 10rem;
+
+    @include m.desktop {
+        margin-top: 0;
+    }
+
     .caja_bienvenida {
         background-image: linear-gradient(180deg,#121212,#59025a);
         padding: 2rem 4rem;
@@ -11,16 +17,28 @@
             display: flex;
             justify-content: center;
 
+            @include m.desktop {
+                margin-top: 5rem;
+            }
+
             h1 {
                 font-size: 3rem;
                 text-align: center;
                 color: rgb(226, 226, 226);
+
+                @include m.desktop {
+                    font-size: 5rem;
+                }
             }
         }
 
         .jose_info {
             justify-content: space-around;
             text-align: center;
+
+            @include m.desktop {
+                justify-content: center;
+            }
 
             p {
                 text-align: center;
@@ -31,12 +49,22 @@
                 padding-bottom: 2rem;
             }
 
-            .jose {
-                width: 30vw;
-                min-width: 23rem;
-
+            .contenedor_img {
+                
                 @include m.desktop {
-                    width: 35rem;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .jose {
+                    width: 30vw;
+                    min-width: 20rem;
+    
+                    @include m.desktop {
+                        width: 20vw;
+                        min-width: 30rem;
+                        max-width: 40rem;
+                    }
                 }
             }
 
@@ -55,26 +83,69 @@
                     transform: scale(1.2);
                 }
             }
+
+            @include m.desktop {
+                display: flex;
+
+                padding: 5rem 4rem 8rem 4rem;
+
+                .info_redes {
+                    margin: auto 5rem;
+                    width: 70vw;
+                    max-width: 70rem;
+                    
+                    p {
+                        font-size: 2rem;
+                    }
+                }
+            }
         }
     }
 
     .caja_servicios {
         color: rgb(226, 226, 226);
         background-color: #320132;
-        padding: 4rem;
+        padding: 5rem 4rem 8rem 4rem;
 
         h2 {
             text-align: center;
             margin: 2rem auto 4rem auto;
             font-size: 3.5rem;
+
+            @include m.desktop {
+                font-size: 4rem;
+            }
         }
 
         .servicios {
             text-align: center;
             display: grid;
             place-items: center;
-            gap: 5rem;
+            gap: 10rem;
             grid-template-columns: repeat(1, 1fr);
+
+            @include m.desktop {
+                grid-template-columns: repeat(3, 1fr);
+                margin: 0 auto;
+                max-width: 130rem;
+                gap: 0;
+            }
+
+            .servicio {
+                width: 70%;
+
+                .tecnologias {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+                
+                    img {
+                        width: 10vw;
+                        min-width: 4rem;
+                        max-width: 6rem;
+                    }
+                }
+            }
 
             h3 {
                 font-size: 2.5rem;
@@ -82,10 +153,10 @@
 
             p {
                 font-size: 1.5rem;
-            }
 
-            @include m.desktop {
-                grid-template-columns: repeat(3, 1fr);
+                @include m.desktop {
+                    font-size: 2rem;
+                }
             }
 
             i {
@@ -104,6 +175,10 @@
             text-align: center;
             margin: 2rem auto 4rem auto;
             font-size: 3.5rem;
+
+            @include m.desktop {
+                font-size: 4rem;
+            }
         }
 
         .proyectos {
@@ -112,6 +187,12 @@
             place-items: center;
             gap: 5rem;
             grid-template-columns: repeat(1, 1fr);
+
+            @include m.desktop {
+                margin: 0 auto;
+                max-width: 130rem;
+                gap: 0;
+            }
 
             h3 {
                 font-size: 2.5rem;
@@ -123,6 +204,14 @@
                 a {
                     color: #df00a7;
                     font-size: 1.6rem;
+
+                    @include m.desktop {
+                        font-size: 2rem;
+                    }
+                }
+
+                @include m.desktop {
+                    font-size: 2rem;
                 }
             }
 
@@ -138,6 +227,10 @@
                 img:hover {
                     transform: scale(1.1);
                 }
+
+                @include m.desktop {
+                    width: 70%;
+                }
             }
         }
     }
@@ -149,6 +242,13 @@
         border-top: solid 2px #a3007a;
         border-bottom: solid 2px #a3007a;
 
+        .caja_contactame {
+            @include m.desktop {
+                max-width: 100rem;
+                margin: 0 auto;
+            }
+        }
+
         h2 {
             margin: 0 0 3rem 0;
             text-align: center;
@@ -159,6 +259,12 @@
             margin: 0 0 3rem 0;
             text-align: center;
             font-size: 1.5rem;
+
+            @include m.desktop {
+                width: 80%;
+                margin: 3rem auto;
+                font-size: 2rem;
+            }
         }
 
         .redes_sociales {

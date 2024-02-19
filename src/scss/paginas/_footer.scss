@@ -9,6 +9,11 @@
         display: flex;
         justify-content: space-around;
         margin-bottom: 5rem;
+
+        @include m.desktop {
+            justify-content: center;
+            gap: 10rem;
+        }
         
         .logo {
             width: 10rem;
@@ -36,5 +41,9 @@
         color: rgb(226, 226, 226);
         text-align: center;
         font-size: 1.3rem;
+
+        @include m.desktop {
+            font-size: 1.5rem;
+        }
     }
 }
