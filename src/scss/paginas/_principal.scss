@@ -12,15 +12,24 @@
             justify-content: center;
 
             h1 {
-                font-size: 4rem;
+                font-size: 3rem;
                 text-align: center;
-                color: white;
+                color: rgb(226, 226, 226);
             }
         }
 
         .jose_info {
             justify-content: space-around;
             text-align: center;
+
+            p {
+                text-align: center;
+                margin-top: 3rem;
+                font-size: 1.5rem;
+                margin-bottom: 0;
+                color: rgb(226, 226, 226);
+                padding-bottom: 2rem;
+            }
 
             .jose {
                 width: 30vw;
@@ -38,7 +47,7 @@
 
                 a {
                     font-size: 3rem;
-                    color: white;
+                    color: rgb(226, 226, 226);
                     transition: all .2s ease;
                 }
 
@@ -46,27 +55,18 @@
                     transform: scale(1.2);
                 }
             }
-            
-            p {
-                text-align: center;
-                margin-top: 3rem;
-                font-size: 2rem;
-                margin-bottom: 0;
-                color: white;
-                padding-bottom: 2rem;
-            }
         }
     }
 
     .caja_servicios {
-        color: white;
+        color: rgb(226, 226, 226);
         background-color: #320132;
         padding: 4rem;
 
         h2 {
             text-align: center;
             margin: 2rem auto 4rem auto;
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
 
         .servicios {
@@ -75,6 +75,14 @@
             place-items: center;
             gap: 5rem;
             grid-template-columns: repeat(1, 1fr);
+
+            h3 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
 
             @include m.desktop {
                 grid-template-columns: repeat(3, 1fr);
@@ -87,14 +95,15 @@
     }
 
     .caja_proyectos {
-        color: white;
+        color: rgb(226, 226, 226);
         background-color: #191919;
         padding: 4rem;
+        border-top: solid 2px #a3007a;
 
         h2 {
             text-align: center;
             margin: 2rem auto 4rem auto;
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
 
         .proyectos {
@@ -103,6 +112,19 @@
             place-items: center;
             gap: 5rem;
             grid-template-columns: repeat(1, 1fr);
+
+            h3 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+
+                a {
+                    color: #df00a7;
+                    font-size: 1.6rem;
+                }
+            }
 
             @include m.desktop {
                 grid-template-columns: repeat(3, 1fr);
@@ -115,6 +137,75 @@
                 }
                 img:hover {
                     transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .contactame {
+        background-color: #320132;
+        color: rgb(226, 226, 226);
+        padding: 4rem;
+        border-top: solid 2px #a3007a;
+        border-bottom: solid 2px #a3007a;
+
+        h2 {
+            margin: 0 0 3rem 0;
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        p {
+            margin: 0 0 3rem 0;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .redes_sociales {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+
+            a {
+                font-size: 4rem;
+                color: rgb(226, 226, 226);
+                transition: all .2s ease;
+            }
+
+            a:hover {
+                transform: scale(1.2);
+            }
+
+            .flecha {
+                display: flex;
+                align-items: center;
+                font-size: 4rem;
+                color: rgb(251, 255, 0);                
+            }
+
+            .izquierda {
+                animation: mover-izquierda 0.4s infinite alternate; /* Animación de movimiento hacia la izquierda */
+            }
+              
+              .derecha {
+                animation: mover-derecha 0.4s infinite alternate; /* Animación de movimiento hacia la derecha */
+            }
+              
+              @keyframes mover-izquierda {
+                from {
+                  transform: translateX(0); /* Posición inicial */
+                }
+                to {
+                  transform: translateX(-24px); /* Posición final */
+                }
+            }
+              
+              @keyframes mover-derecha {
+                from {
+                  transform: translateX(0); /* Posición inicial */
+                }
+                to {
+                  transform: translateX(24px); /* Posición final */
                 }
             }
         }

@@ -1,0 +1,40 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer {
+    background-color: #191919;
+    padding: 4rem 4rem 2rem 4rem;
+
+    .redes_logos {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5rem;
+        
+        .logo {
+            width: 10rem;
+        }
+
+        .redes_sociales {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            align-items: center;
+
+            a {
+                font-size: 3rem;
+                color: rgb(226, 226, 226);
+                transition: all .2s ease;
+            }
+
+            a:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    p {
+        color: rgb(226, 226, 226);
+        text-align: center;
+        font-size: 1.3rem;
+    }
+}
